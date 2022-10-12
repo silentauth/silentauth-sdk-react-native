@@ -1,0 +1,133 @@
+{
+  "name": "@silentauth/silentauth-sdk-react-native",
+  "version": "1.0.1",
+  "description": "React Native SDK for SilentAuth",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "silentauth-sdk-react-native.podspec",
+    "!lib/typescript/example",
+    "!android/build",
+    "!ios/build",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "scripts": {
+    "test": "jest",
+    "typescript": "tsc --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "prepare": "bob build",
+    "release": "release-it",
+    "example": "yarn --cwd example",
+    "pods": "cd example && pod-install --quiet",
+    "bootstrap": "yarn example && yarn && yarn pods",
+    "changelog": "standard-version",
+    "publish:canary": "npm publish --tag canary --access public",
+    "publish:latest": "npm publish --access public"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": "https://github.com/silentauth/silentauth-sdk-react-native",
+  "author": "SilentAuth <community@4Auth.io> (https://github.com/silentauth)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silentauth/silentauth-sdk-react-native/issues"
+  },
+  "homepage": "https://github.com/silentauth/silentauth-sdk-react-native#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^11.0.0",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "@release-it/conventional-changelog": "^2.0.0",
+    "@types/jest": "^26.0.24",
+    "@types/react": "^17.0.16",
+    "@types/react-native": "0.67.4",
+    "commitlint": "^11.0.0",
+    "eslint": "7",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "pod-install": "^0.1.33",
+    "prettier": "^2.6.2",
+    "react": "16.13.1",
+    "react-native": "0.67.4",
+    "react-native-builder-bob": "^",
+    "standard-version": "^9.3.2",
+    "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/lib/"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn lint && yarn typescript"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@react-native-community",
+      "prettier"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  }
+}
