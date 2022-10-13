@@ -46,6 +46,7 @@ const AppButton = ({
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
+const header = 'SilentAuth';
 
 export default function App() {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
@@ -192,12 +193,7 @@ export default function App() {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View style={styles.container}>
-        <Image
-          source={require('./images/tru-id-logo.png')}
-          //TO DO: TRU.ID LOGO KEEP OR REPLACE?
-          // eslint-disable-next-line react-native/no-inline-styles
-          style={{ width: 300, height: 300 }}
-        />
+        <Text style={styles.companyName}>{header}</Text>
         <TextInput
           keyboardType="phone-pad"
           placeholder="Phone number"
