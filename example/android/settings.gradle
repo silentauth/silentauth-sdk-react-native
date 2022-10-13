@@ -1,0 +1,6 @@
+rootProject.name = 'SilentAuthSdkReactNativeExample'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+
+include ':silentauthsdkreactnative'
+project(':silentauthsdkreactnative').projectDir = new File(rootProject.projectDir, '../../android')

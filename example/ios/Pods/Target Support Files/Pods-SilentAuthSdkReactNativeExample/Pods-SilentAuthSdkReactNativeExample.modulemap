@@ -1,0 +1,6 @@
+module Pods_SilentAuthSdkReactNativeExample {
+  umbrella header "Pods-SilentAuthSdkReactNativeExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
