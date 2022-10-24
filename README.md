@@ -138,12 +138,6 @@ const res = await SilentAuthSdkReactNative.openWithDataCellular<CheckResponse>(c
 
 There's an embedded example demo is located in the `example` directory, see [README](./example/README.md)
 
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## Development
-
 ### Releasing
 
 Update `CHANGELOG.md` and finesse.
