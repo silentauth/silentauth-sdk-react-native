@@ -51,12 +51,11 @@ maven {
 
 ## Compatibility
 
-- [Android](../tru-sdk-android#compatibility)
-- [iOS](../tru-sdk-ios#compatibility)
+- [Android](../silentauth-sdk-android#compatibility)
+- [iOS](../silentauth-sdk-ios#compatibility)
 
 ## Usage
-<!-- TO DO: Check for URL -->
-* Is the [device eligible](https://developer.tru.id/docs/reference/utils#tag/coverage/operation/get-public-coverage-by-device-ip) for silent authentication?
+* Is the device elgibile for silent authentication?
 
 ```js
 import SilentAuthSdkReactNative, {
@@ -92,8 +91,7 @@ import SilentAuthSdkReactNative, {
     }
 
 ```
-<!-- TO DO: Check for URL -->
-* How to open a check URL return by the [PhoneCheck API](https://developer.tru.id/docs/phone-check) or [SubscriberCheck API](https://developer.tru.id/docs/subscriber-check)
+* How to open a check URL return?
 
 ```js
 import SilentAuthSdkReactNative, {
@@ -139,12 +137,6 @@ const res = await SilentAuthSdkReactNative.openWithDataCellular<CheckResponse>(c
 ## Example Demo
 
 There's an embedded example demo is located in the `example` directory, see [README](./example/README.md)
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## Development
 
 ### Releasing
 
