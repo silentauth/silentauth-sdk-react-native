@@ -16,7 +16,6 @@ import {
   TextInput,
   ActivityIndicator,
   Alert,
-  Image,
 } from 'react-native';
 
 import SilentAuthSdkReactNative, {
