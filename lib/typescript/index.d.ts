@@ -4,7 +4,7 @@ export declare type ErrorResponse = {
     debug?: DebugResponse;
 };
 export declare type ApiError = {
-    status: string;
+    status: number;
     type: string;
     title: string;
     detail: string;
@@ -54,3 +54,4 @@ declare type SilentAuthSdkReactNativeType = {
 };
 declare const _default: SilentAuthSdkReactNativeType;
 export default _default;
+//# sourceMappingURL=index.d.ts.map
