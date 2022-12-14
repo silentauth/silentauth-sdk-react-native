@@ -45,7 +45,7 @@ For Android, add the following to your application's `build.gradle`:
 
 ```groovy
 maven {
-    url "https://gitlab.com/api/v4/projects/4005302/packages/maven"
+    url "https://gitlab.com/api/v4/projects/40053021/packages/maven"
 }
 ```
 
