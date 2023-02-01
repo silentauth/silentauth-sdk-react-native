@@ -337,10 +337,12 @@ PODS:
     - React-jsi (= 0.67.4)
     - React-logger (= 0.67.4)
     - React-perflogger (= 0.67.4)
-  - silentauth-sdk-ios (1.0.1)
-  - silentauth-sdk-react-native (1.0.2):
+  - RNSha256 (1.4.9):
     - React-Core
-    - silentauth-sdk-ios (= 1.0.1)
+  - silentauth-sdk-ios (1.0.2)
+  - silentauth-sdk-react-native (1.0.3):
+    - React-Core
+    - silentauth-sdk-ios (= 1.0.2)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -399,6 +401,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNSha256 (from `../node_modules/react-native-sha256`)
   - silentauth-sdk-react-native (from `../..`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -479,6 +482,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNSha256:
+    :path: "../node_modules/react-native-sha256"
   silentauth-sdk-react-native:
     :path: "../.."
   Yoga:
@@ -527,8 +532,9 @@ SPEC CHECKSUMS:
   React-RCTVibration: 3b52a7dced19cdb025b4f88ab26ceb2d85f30ba2
   React-runtimeexecutor: a9d3c82ddf7ffdad9fbe6a81c6d6f8c06385464d
   ReactCommon: 07d0c460b9ba9af3eaf1b8f5abe7daaad28c9c4e
-  silentauth-sdk-ios: 8ef7bc15f6aa24a66e4625053abb668587867bd2
-  silentauth-sdk-react-native: ca7f32b947256e62bf9e9ef353ee56ccb555e54e
+  RNSha256: a6bc3640a34eb41907e363828b9ec742c274298d
+  silentauth-sdk-ios: 34262123bfe689d6dc424217a144f710462e84ad
+  silentauth-sdk-react-native: 52c3a7d311bb206a9ac54dde255fc62f29d0c3e4
   Yoga: d6b6a80659aa3e91aaba01d0012e7edcbedcbecd
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

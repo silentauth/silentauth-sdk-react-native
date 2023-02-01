@@ -1,1 +1,1 @@
-{"version":3,"names":["SilentAuthSdkReactNative","NativeModules"],"sourceRoot":"../../src","sources":["index.tsx"],"mappings":";;;;;;AAAA;AAsEA,MAAM;EAAEA;AAAyB,CAAC,GAAGC,0BAAa;AAAC,eAEpCD,wBAAwB;AAAA"}
+{"version":3,"names":["SilentAuthSdkReactNative","NativeModules"],"sourceRoot":"../../src","sources":["index.tsx"],"mappings":";;;;;;AAAA;AA2EA,MAAM;EAAEA;AAAyB,CAAC,GAAGC,0BAAa;AAAC,eAEpCD,wBAAwB;AAAA"}

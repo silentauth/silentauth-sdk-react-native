@@ -69,8 +69,15 @@ import SilentAuthSdkReactNative, {
 } from '@silentauth/silentauth-sdk-react-native';
 
 // ...
-
- const res = await SilentAuthSdkReactNative.openWithDataCellular<ReachabilityResponse>("https://eu.api.silentauth.com/public/coverage/v0.1/device_ip");
+// retrieve access token with coverage scope from back-end
+const token = ...
+// open the device_ip public API endpoint
+    if (token) {
+      const res = await SilentAuthSdkReactNative.openWithDataCellularAndAccessToken<ReachabilityResponse>(
+        'https://eu.api.silentauth.com/coverage/v0.1/device_ip',
+        true,
+        token
+        );
     if ('error' in res) {
       // error ${err.error_description}
     } else if ('http_status' in res) {
@@ -89,6 +96,9 @@ import SilentAuthSdkReactNative, {
         // other error see ${body.detail}
       }
     }
+    }
+
+ 
 
 ```
 * How to open a check URL return?
