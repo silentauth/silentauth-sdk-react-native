@@ -1,6 +1,6 @@
 {
   "name": "@silentauth/silentauth-sdk-react-native",
-  "version": "1.0.3",
+  "version": "1.0.3-a",
   "description": "React Native SDK for SilentAuth",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
