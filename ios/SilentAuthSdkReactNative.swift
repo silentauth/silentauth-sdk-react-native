@@ -41,6 +41,29 @@ class SilentAuthSdkReactNative: NSObject {
             resolve(res)
         }
     }
+
+    @objc(openWithDataCellularAndAccessToken:debug:accessToken:withResolver:withRejecter:)
+    public func openWithDataCellularAndAccessToken(url: String,
+                                                   debug: Bool,
+                                                   accessToken: String,
+                                                   resolve: @escaping RCTPromiseResolveBlock,
+                                                   reject: @escaping RCTPromiseRejectBlock) -> Void {
+
+       print("checking if there is url")
+       guard let u = URL(string: url) else {
+            let failure = [
+                "error":"sdk_error",
+                "error_description":"invalid url"]
+           print("resolving with failure")
+           resolve(failure)
+           return
+       }
+
+        let silentAuthSdk: SilentAuthSDK = SilentAuthSDK()
+        silentAuthSdk.openWithDataCellularAndAccessToken(url: u, accessToken: accessToken, debug: debug) { res in
+           resolve(res)
+       }
+   }
     
     @objc
     static func requiresMainQueueSetup() -> Bool {
