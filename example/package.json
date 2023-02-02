@@ -1,6 +1,6 @@
 {
-  "name": "tru-sdk-react-native-example",
-  "description": "Example app for tru-sdk-react-native",
+  "name": "silentauth-sdk-react-native-example",
+  "description": "Example app for silentauth-sdk-react-native",
   "version": "0.0.1",
   "private": true,
   "scripts": {
