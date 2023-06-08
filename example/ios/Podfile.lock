@@ -340,7 +340,7 @@ PODS:
   - RNSha256 (1.4.9):
     - React-Core
   - silentauth-sdk-ios (1.0.3)
-  - silentauth-sdk-react-native (1.0.5):
+  - silentauth-sdk-react-native (1.0.6):
     - React-Core
     - silentauth-sdk-ios (= 1.0.3)
   - Yoga (1.14.0)
@@ -534,7 +534,7 @@ SPEC CHECKSUMS:
   ReactCommon: a30c2448e5a88bae6fcb0e3da124c14ae493dac1
   RNSha256: a6bc3640a34eb41907e363828b9ec742c274298d
   silentauth-sdk-ios: a22a21cb1008cdb58a41eecba3130cb885195f25
-  silentauth-sdk-react-native: dd1050d32d6293a2c91712f2630f8366ef3f1547
+  silentauth-sdk-react-native: a28565b6445629c89d477fafc2f55d6e69cc103b
   Yoga: 099a946cbf84c9b32ffdc4278d72db26710ecf92
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
