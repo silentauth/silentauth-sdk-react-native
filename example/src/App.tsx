@@ -7,8 +7,7 @@ import {
 } from 'react-native';
 
 // @ts-ignore
-import { BASE_URL, RTA_KEY, RTA_URL } from '@env';
-import { sha256 } from 'react-native-sha256';
+import { BASE_URL } from '@env';
 
 import {
   StyleSheet,
@@ -36,11 +35,6 @@ const client: AxiosInstance = axios.create({
   timeout: 30000,
 });
 
-const clientCoverage: AxiosInstance = axios.create({
-  baseURL: RTA_URL,
-  timeout: 30000,
-});
-
 const AppButton = ({
   onPress,
   title,
@@ -54,14 +48,15 @@ const AppButton = ({
 );
 const header = 'SilentAuth';
 
+const headers = {
+  'Content-Type': 'application/json',
+};
+
 const getCoverageAccessToken = async (): Promise<
   AxiosResponse<TokenResponse>
 > => {
-  const signature = await sha256(RTA_KEY);
-  return clientCoverage.get('/coverage_access_token', {
-    headers: {
-      'x-rta': signature,
-    },
+  return client.get('/coverage-access-token', {
+    headers: headers,
   });
 };
 
@@ -112,14 +107,14 @@ export default function App() {
     var canMoveToNextStep = false;
     setProgress('Checking if on a Mobile IP');
     const tokenResponse = await getCoverageAccessToken();
-    const token = tokenResponse.data.access_token;
+    const token = tokenResponse.data.token;
     if (token) {
       const res =
-      await SilentAuthSdkReactNative.openWithDataCellularAndAccessToken<ReachabilityResponse>(
-        'https://eu.api.silentauth.com/coverage/v0.1/device_ip',
-        true,
-        token
-      );
+        await SilentAuthSdkReactNative.openWithDataCellularAndAccessToken<ReachabilityResponse>(
+          'https://eu.api.silentauth.com/coverage/v0.1/device_ip',
+          true,
+          token
+        );
       console.log('------- openWithDataCellular -------');
       console.log('Is Reachable result =>' + JSON.stringify(res));
       console.log('------------------------------------');
@@ -148,9 +143,15 @@ export default function App() {
         let postCheckNumberRes: AxiosResponse;
         try {
           setProgress(`Creating PhoneCheck`);
-          postCheckNumberRes = await client.post('/v0.2/phone-check', {
-            phone_number: phoneNumber,
-          });
+          postCheckNumberRes = await client.post(
+            '/v0.2/phone-check',
+            {
+              phone_number: phoneNumber,
+            },
+            {
+              headers: headers,
+            }
+          );
           console.log('[POST CHECK]:', postCheckNumberRes.data);
           setProgress(`PhoneCheck created`);
         } catch (error) {
@@ -168,7 +169,9 @@ export default function App() {
           );
         console.log(`PhoneCheck [Done] ->`);
         if ('error' in resp) {
-          setProgress(`Error in openWithDataCellular: ${resp.error_description}`);
+          setProgress(
+            `Error in openWithDataCellular: ${resp.error_description}`
+          );
         } else if ('http_status' in resp) {
           const httpStatus = resp.http_status;
           if (httpStatus === 200 && resp.response_body !== undefined) {
@@ -203,7 +206,10 @@ export default function App() {
               } catch (error: any) {
                 setProgress(`Error: ${error.message}`);
                 console.log(JSON.stringify(error, null, 2));
-                showRequestError('Error retrieving check result', error.message);
+                showRequestError(
+                  'Error retrieving check result',
+                  error.message
+                );
                 return;
               }
             }
