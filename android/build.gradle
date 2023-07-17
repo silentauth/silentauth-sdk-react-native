@@ -9,7 +9,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:7.0.2'
+    classpath 'com.android.tools.build:gradle:7.4.2'
     // noinspection DifferentKotlinGradleVersion
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
@@ -129,7 +129,7 @@ def kotlin_version = getExtOrDefault('kotlinVersion')
 
 dependencies {
   // noinspection GradleDynamicVersion
-  implementation "com.silentauth.sdk:silentauth-sdk-android:1.0.4"
+  implementation "com.silentauth.sdk:silentauth-sdk-android:1.0.5"
   api "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2"
