@@ -1,13 +1,17 @@
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+### 1.0.10 (2023-08-16)
+### Changes
+* Bump silentauth-sdk-android dependency to v1.0.6.
+* Bump silentauth-sdk-ios dependency to v1.0.6.
 ### 1.0.9 (2023-07-20)
 ### Changes
-* Bump silentauth-ios-sdk dependency to v1.0.5.
+* Bump silentauth-sdk-ios dependency to v1.0.5.
 ### 1.0.8 (2023-07-14)
 ### Changes
-* Bump silentauth-android-sdk dependency to v1.0.5.
-* Bump silentauth-ios-sdk dependency to v1.0.4.
+* Bump silentauth-sdk-android dependency to v1.0.5.
+* Bump silentauth-sdk-ios dependency to v1.0.4.
 * Android target increased to Android 13
 ### 1.0.7 (2023-06-13)
 ### Changes
@@ -18,15 +22,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 1.0.5 (2023-04-27)
 ### Changes
-* Bump silentauth-android-sdk dependency to v1.0.4.
+* Bump silentauth-sdk-android dependency to v1.0.4.
 
 ### 1.0.4 (2023-02-28)
 ### Changes
-* Bump silentauth-ios-sdk dependency to v1.0.3.
+* Bump silentauth-sdk-ios dependency to v1.0.3.
 ### 1.0.3a (2023-02-01)
 ### Changes
-* Bump silentauth-android-sdk dependency to v1.0.3.
-* Bump silentauth-ios-sdk dependency to v1.0.2.
+* Bump silentauth-sdk-android dependency to v1.0.3.
+* Bump silentauth-sdk-ios dependency to v1.0.2.
 * New method openWithDataCellularAndAccessToken 
 
 ### 1.0.3 (2022-12-14)
@@ -34,7 +38,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 1.0.2 (2022-11-07)
 ### Changes
-* Bump silentauth-android-sdk dependency to v1.0.2.
+* Bump silentauth-sdk-android dependency to v1.0.2.
 * Android target increased to Android 12
 * ApiError type amended
 
