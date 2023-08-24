@@ -337,10 +337,10 @@ PODS:
     - React-jsi (= 0.67.5)
     - React-logger (= 0.67.5)
     - React-perflogger (= 0.67.5)
-  - silentauth-sdk-ios (1.0.6)
-  - silentauth-sdk-react-native (1.0.10):
+  - silentauth-sdk-ios (1.0.7)
+  - silentauth-sdk-react-native (1.0.11):
     - React-Core
-    - silentauth-sdk-ios (= 1.0.6)
+    - silentauth-sdk-ios (= 1.0.7)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -527,8 +527,8 @@ SPEC CHECKSUMS:
   React-RCTVibration: c3b8a3245267a3849b0c7cb91a37606bf5f3aa65
   React-runtimeexecutor: 434efc9e5b6d0f14f49867f130b39376c971c1aa
   ReactCommon: a30c2448e5a88bae6fcb0e3da124c14ae493dac1
-  silentauth-sdk-ios: 411325c7fef57dd91792aaca64147d3281e79da1
-  silentauth-sdk-react-native: 0c3f98fdd3aa044a51f6e99d740a494e66174221
+  silentauth-sdk-ios: 5eb920c014d277eb48086228c1904aef8a35bffe
+  silentauth-sdk-react-native: fb24abf17d862fdbadaf64d23618bbc978ec882e
   Yoga: 099a946cbf84c9b32ffdc4278d72db26710ecf92
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
